@@ -13,7 +13,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // show bottom sheet dialog
+        BottomSheetFragment() { sortKey ->
+        }.apply {
+            show(this@MainActivity.supportFragmentManager, "")
+            isCancelable = false
+        }
     }
+
 
 
     private fun handleBottomSheet() {
