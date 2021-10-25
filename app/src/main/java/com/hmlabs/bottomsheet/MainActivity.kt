@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.LinearLayoutCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class MainActivity : AppCompatActivity() {
@@ -14,11 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // show bottom sheet dialog
-        BottomSheetFragment() { sortKey ->
-        }.apply {
-            show(this@MainActivity.supportFragmentManager, "")
-            isCancelable = false
-        }
+//        BottomSheetFragment() { sortKey ->
+//        }.apply {
+//            show(this@MainActivity.supportFragmentManager, "")
+//            isCancelable = false
+//        }
+        handleBottomSheet()
     }
 
 
@@ -36,6 +38,9 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+
+        val adapter =Adapter(listOf("item 1","item 1","item 1","item 1","item 1","item 1","item 1","item 1","item 1","item 1","item 1"))
+        findViewById<RecyclerView>(R.id.rv).adapter = adapter
 
     }
 }

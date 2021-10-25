@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/bottomSheet"
         android:layout_width="match_parent"
-        android:layout_height="323dp"
+        android:layout_height="400dp"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_view_bg"
@@ -33,28 +33,20 @@
             android:layout_marginTop="24dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="18sp"
 
             />
 
-        <TextView
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="You can put any view here image view,text view or any view group "
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:layout_marginTop="24dp"
+            tools:listitem="@layout/item_rv"
             />
-
-
-
-
-
-
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
